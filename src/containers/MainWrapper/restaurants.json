@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "title": "ՊԱՆԴՈԿ ԵՐԵՎԱՆ",
     "coordinates": {
       "lat": 40.179004,
@@ -10,19 +11,21 @@
     "address": "Ամիրյան 5"
   },
   {
+    "id": 2,
     "title": "ՊԱՆԴՈԿ ԵՐԵՎԱՆ 1",
     "coordinates": {
       "lat": 40.18,
-      "lng": 44.26047
+      "lng": 44.76047
     },
     "rating": 4,
     "description": "Համով Բաներ",
     "address": "Ամիրյան 9"
   },
   {
+    "id": 3,
     "title": "ՊԱՆԴՈԿ ԵՐԵՎԱՆ 2",
     "coordinates": {
-      "lat": 40.15,
+      "lat": 40.55,
       "lng": 44.25047
     },
     "rating": 4,
@@ -30,23 +33,37 @@
     "address": "Ամիրյան 9"
   },
   {
-    "title": "ՊԱՆԴՈԿ ԵՐԵՎԱՆ 188",
+    "id": 4,
+    "title": "Բալենի 188",
     "coordinates": {
-      "lat": 40.198,
-      "lng": 44.250047
+      "lat": 40.598,
+      "lng": 44.150047
     },
     "rating": 4,
     "description": "Համով Բաներ",
     "address": "Ամիրյան 9"
   },
   {
-    "title": "ՊԱՆԴՈԿ ԵՐԵՎԱՆ 15",
+    "id": 5,
+    "title": "ԵՐԵՎԱՆ 15",
     "coordinates": {
       "lat": 40.18,
       "lng": 44.190047
     },
-    "rating": 4,
+    "rating": 2,
     "description": "Համով Բաներ",
     "address": "Ամիրյան 9"
+  },
+
+  {
+    "id": 6,
+    "title": "Էլբա",
+    "coordinates": {
+      "lat":  40.20079643910851,
+      "lng": 44.550003452467074
+    },
+    "rating": 4,
+    "description": "Համով Բաներ",
+    "address": "Մյասնիկյան"
   }
 ]

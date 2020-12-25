@@ -1,9 +1,26 @@
-import React from 'react'
+import React from "react";
 
-export default function Restaurants() {
-    return (
-        <div>
-            Restaurants
-        </div>
-    )
+import Head from "../Head";
+import List from "../List";
+
+import "./styles.scss";
+
+export default function Restaurants({
+  restaurants,
+  setCurrent,
+  id,
+  ratingRange,
+  setRatingRange,
+  sorting
+}) {
+  return (
+    <div>
+      <Head
+        ratingRange={ratingRange}
+        setRatingRange={setRatingRange}
+        sorting={sorting}
+      />
+      <List data={restaurants} setCurrent={setCurrent} id={id} />
+    </div>
+  );
 }
