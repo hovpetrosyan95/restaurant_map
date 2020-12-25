@@ -1,0 +1,52 @@
+[
+  {
+    "title": "ՊԱՆԴՈԿ ԵՐԵՎԱՆ",
+    "coordinates": {
+      "lat": 40.179004,
+      "lng": 44.510047
+    },
+    "rating": 4.7,
+    "description": "Համով Բաներ",
+    "address": "Ամիրյան 5"
+  },
+  {
+    "title": "ՊԱՆԴՈԿ ԵՐԵՎԱՆ 1",
+    "coordinates": {
+      "lat": 40.18,
+      "lng": 44.26047
+    },
+    "rating": 4,
+    "description": "Համով Բաներ",
+    "address": "Ամիրյան 9"
+  },
+  {
+    "title": "ՊԱՆԴՈԿ ԵՐԵՎԱՆ 2",
+    "coordinates": {
+      "lat": 40.15,
+      "lng": 44.25047
+    },
+    "rating": 4,
+    "description": "Համով Բաներ",
+    "address": "Ամիրյան 9"
+  },
+  {
+    "title": "ՊԱՆԴՈԿ ԵՐԵՎԱՆ 188",
+    "coordinates": {
+      "lat": 40.198,
+      "lng": 44.250047
+    },
+    "rating": 4,
+    "description": "Համով Բաներ",
+    "address": "Ամիրյան 9"
+  },
+  {
+    "title": "ՊԱՆԴՈԿ ԵՐԵՎԱՆ 15",
+    "coordinates": {
+      "lat": 40.18,
+      "lng": 44.190047
+    },
+    "rating": 4,
+    "description": "Համով Բաներ",
+    "address": "Ամիրյան 9"
+  }
+]
