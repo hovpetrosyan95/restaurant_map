@@ -12,18 +12,22 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 360,
     backgroundColor: theme.palette.background.paper,
   },
+  listItem: {
+    cursor: "pointer",
+  },
 }));
 
-export default function ListWrapper({ data, setCurrent,id }) {
+export default function ListWrapper({ data, setCurrent, id }) {
   const classes = useStyles();
 
   return (
     <List className={`${classes.root} list`}>
       {data.map((i) => (
         <ListItem
-          onClick={() => setCurrent(i)}
+          onClick={() => setCurrent({ ...i, fromList: true })}
           key={i.id}
           selected={id === i.id}
+          className={classes.listItem}
         >
           <ListItemText primary={i.title} secondary={i.address} />
           <Rating name="simple-controlled" value={i.rating} readOnly />

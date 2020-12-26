@@ -43,9 +43,8 @@ export default function MainWrapper() {
       ) {
         m.marker.addTo(map);
         return m;
-      }
-      else{
-          m.marker.remove();
+      } else {
+        m.marker.remove();
       }
     });
 
@@ -75,6 +74,12 @@ export default function MainWrapper() {
           )
           .addTo(map);
 
+        marker
+          .getElement()
+          .addEventListener("click", () =>
+            setCurrent({ ...restaurant, marker })
+          );
+
         return { ...restaurant, marker };
       });
 
@@ -84,10 +89,10 @@ export default function MainWrapper() {
   }, []);
 
   useEffect(() => {
-    if (previous) {
+    if (previous?.previous) {
       previous.marker.togglePopup();
     }
-    if (current) {
+    if (current?.fromList) {
       current.marker.togglePopup();
     }
   }, [current]);
