@@ -12,58 +12,211 @@
   },
   {
     "id": 2,
-    "title": "ՊԱՆԴՈԿ ԵՐԵՎԱՆ 1",
+    "title": "Լավաշ",
     "coordinates": {
-      "lat": 40.18,
-      "lng": 44.76047
+      "lat": 40.18292709107924,
+      "lng": 44.51635796826088
     },
-    "rating": 4,
-    "description": "Համով Բաներ",
-    "address": "Ամիրյան 9"
+    "rating": 4.7,
+    "description": "Համով Լավաշ",
+    "address": "Թումանյան 21"
   },
   {
     "id": 3,
-    "title": "ՊԱՆԴՈԿ ԵՐԵՎԱՆ 2",
+    "title": "Կովկաս Պանդոկ",
     "coordinates": {
-      "lat": 40.55,
-      "lng": 44.25047
+      "lat": 40.17962102911795,
+      "lng": 44.522829260242105
     },
-    "rating": 4,
-    "description": "Համով Բաներ",
-    "address": "Ամիրյան 9"
+    "rating": 4.3,
+    "description": "Համեղ Խորոված",
+    "address": "Հանրապետության 82"
   },
   {
     "id": 4,
-    "title": "Բալենի 188",
+    "title": "Գաթա Պանդոկ",
     "coordinates": {
-      "lat": 40.598,
-      "lng": 44.150047
+      "lat": 40.1817686365817,
+      "lng": 44.518977608252214
     },
-    "rating": 4,
-    "description": "Համով Բաներ",
-    "address": "Ամիրյան 9"
+    "rating": 4.6,
+    "description": "Հայկական խոհանոց",
+    "address": "Թումանյան 22"
   },
   {
     "id": 5,
-    "title": "ԵՐԵՎԱՆ 15",
+    "title": "Old Beijing",
     "coordinates": {
-      "lat": 40.18,
-      "lng": 44.190047
+      "lat": 40.18001448900677,
+      "lng": 44.5205547470893
     },
-    "rating": 2,
-    "description": "Համով Բաներ",
-    "address": "Ամիրյան 9"
+    "rating": 4.1,
+    "description": "Չինական խոհանոց",
+    "address": "Թումանյան 9"
   },
-
   {
     "id": 6,
     "title": "Էլբա",
     "coordinates": {
-      "lat":  40.20079643910851,
+      "lat": 40.20079643910851,
       "lng": 44.550003452467074
     },
     "rating": 4,
     "description": "Համով Բաներ",
     "address": "Մյասնիկյան"
+  },
+  {
+    "id": 7,
+    "title": "Sushi Kushi",
+    "coordinates": {
+      "lat": 40.180809598901,
+      "lng": 44.52036162804802
+    },
+    "rating": 4.8,
+    "description": "Ճապոնական Ռեստորան",
+    "address": "Թումանյան 16"
+  },
+  {
+    "id": 8,
+    "title": "New Tao",
+    "coordinates": {
+      "lat": 40.180129247711214,
+      "lng": 44.52113410421313
+    },
+    "rating": 4.1,
+    "description": "Ասիական Խոհանոց",
+    "address": "Թումանյան 10"
+  },
+  {
+    "id": 9,
+    "title": "Sakurada Japanese",
+    "coordinates": {
+      "lat": 40.18158010887739,
+      "lng": 44.51934238866351
+    },
+    "rating": 4.2,
+    "description": "Շատ Համով Բաներ",
+    "address": "Նալբանդյան 20"
+  },
+  {
+    "id": 10,
+    "title": "CEO 3",
+    "coordinates": {
+      "lat": 40.18938814363211,
+      "lng": 44.514281811505015
+    },
+    "rating": 4.6,
+    "description": "Համով Բաներ",
+    "address": "Բաղրամյան 2"
+  },
+  {
+    "id": 11,
+    "title": "Los Pueblos Authentic",
+    "coordinates": {
+      "lat": 40.19028033874086,
+      "lng": 44.515912508153995
+    },
+    "rating": 4.7,
+    "description": "Մեքսիկական Խոհանոց",
+    "address": "Թամանյան 18"
+  },
+  {
+    "id": 12,
+    "title": "Շառլ",
+    "coordinates": {
+      "lat": 40.19023825432908,
+      "lng": 44.51510817803979
+    },
+    "rating": 4.4,
+    "description": "Dine in",
+    "address": "Թամանյան 3"
+  },
+  {
+    "id": 13,
+    "title": "Թուֆենկյան-Խարբերդ",
+    "coordinates": {
+      "lat": 40.1767362269516,
+      "lng": 44.516529528638294
+    },
+    "rating": 4.2,
+    "description": "Համով Բաներ",
+    "address": "Հանրապետության 10"
+  },
+  {
+    "id": 14,
+    "title": "EL Garden",
+    "coordinates": {
+      "lat": 40.18842936659792, 
+      "lng": 44.482015284369474
+    },
+    "rating": 4.4,
+    "description": "Համով Բաներ",
+    "address": "Ծիծեռնակաբերդի 8"
+  },
+  {
+    "id": 15,
+    "title": "Indian Mehak",
+    "coordinates": {
+      "lat": 40.19036995851641, 
+      "lng": 44.52319324482684
+    },
+    "rating": 4.9,
+    "description": "Հնդակական խոհանոց",
+    "address": "Կորյունի 10"
+  },
+  {
+    "id": 16,
+    "title": "Անկապ Ռեստորան",
+    "coordinates": {
+      "lat": 40.184132060871896, 
+      "lng": 44.51001400564242
+    },
+    "rating": 1,
+    "description": "Հնացած ուտելիքներ",
+    "address": "Անհասցե"
+  },
+  {
+    "id": 17,
+    "title": "Վատ Ռեստորան",
+    "coordinates": {
+      "lat": 40.18301731958495,
+      "lng":  44.51044315906747
+    },
+    "rating": 2,
+    "description": "Էստի Համեցեք",
+    "address": "---"
+  },
+  {
+    "id": 18,
+    "title": "Նորմալ Տեղ",
+    "coordinates": {
+      "lat": 40.18006644540814, 
+      "lng": 44.52649349716461
+    },
+    "rating": 3,
+    "description": "Ջուր չկա",
+    "address": "---"
+  },
+  {
+    "id": 19,
+    "title": "Գենացվալե",
+    "coordinates": {
+      "lat": 40.1855746402321, 
+      "lng": 44.52402586593044
+    },
+    "rating": 4,
+    "description": "Վրացական Խոհանոց",
+    "address": "Իսահակյան 12"
+  },
+  {
+    "id": 20,
+    "title": "Cafe Central",
+    "coordinates": {
+      "lat": 40.185082855321575, 
+      "lng": 44.52067846921499
+    },
+    "rating": 4.5,
+    "description": "---",
+    "address": "Աբովյան 30"
   }
 ]

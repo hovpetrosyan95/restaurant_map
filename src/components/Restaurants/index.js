@@ -11,7 +11,8 @@ export default function Restaurants({
   id,
   ratingRange,
   setRatingRange,
-  sorting
+  sorting,
+  filtering
 }) {
   return (
     <div>
@@ -19,6 +20,7 @@ export default function Restaurants({
         ratingRange={ratingRange}
         setRatingRange={setRatingRange}
         sorting={sorting}
+        filtering={filtering}
       />
       <List data={restaurants} setCurrent={setCurrent} id={id} />
     </div>

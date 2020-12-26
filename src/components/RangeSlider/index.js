@@ -42,11 +42,9 @@ const marks = [
   },
 ];
 
-function valuetext(value) {
-  return `${value}°C`;
-}
-
-export default function RangeSlider() {
+export default function RangeSlider({
+    values, setRatingRange
+}) {
   const classes = useStyles();
 
   return (
@@ -62,10 +60,11 @@ export default function RangeSlider() {
         min={0}
         max={5}
         defaultValue={[0, 5]}
+        value={values}
         aria-labelledby="range-slider"
         step={1}
         marks={marks}
-        // valueLabelDisplay="on"
+        onChange={(ev, newValue) => setRatingRange(newValue)}
       />
     </FormControl>
   );

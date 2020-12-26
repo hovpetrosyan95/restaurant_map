@@ -14,25 +14,58 @@ import "./styles.scss";
 
 mapboxgl.accessToken = mapAccessToken;
 const { Map, Marker, Popup } = mapboxgl;
+let map;
 
 export default function MainWrapper() {
   const [current, setCurrent] = useState(null);
   const [ratingRange, setRatingRange] = useState([0, 5]);
+  const [searchText, setSearchText] = useState("");
   const [sortByName, setSortByName] = useState(null);
   const [sortByRating, setSortByRating] = useState(null);
   const previous = usePrevious(current);
 
-  const [center, reCenter] = useState({
+  const [center, ] = useState({
     lat: 40.1772,
     lng: 44.50349,
   });
 
   const [markers, setMarkers] = useState([]);
+  const [allMarkers, setAllMarkers] = useState([]);
 
   const mapRef = useRef(null);
 
   useEffect(() => {
-    const map = new Map({
+    const markersBySearching = allMarkers.filter((m) => {
+      if (m.title.search(searchText) === -1) {
+        m.marker.remove();
+      } else {
+        if (!markers.find((cm) => cm.id === m.id)) {
+          m.marker.addTo(map);
+        }
+        return m;
+      }
+    });
+
+    const markersByRating = allMarkers.filter((m) => {
+      if (m.rating >= ratingRange[0] && m.rating <= ratingRange[1]) {
+        if (!markers.find((cm) => cm.id === m.id)) {
+          m.marker.addTo(map);
+        }
+        return m;
+      } else {
+        m.marker.remove();
+      }
+    });
+
+    const updatedMarkers = markersByRating.filter((m) =>
+      markersBySearching.includes(m)
+    );
+
+    setMarkers(updatedMarkers);
+  }, [searchText, ratingRange]);
+
+  useEffect(() => {
+    map = new Map({
       container: mapRef.current,
       style: "mapbox://styles/mapbox/streets-v11",
       center: [center.lng, center.lat], // starting position [lng, lat]
@@ -58,6 +91,7 @@ export default function MainWrapper() {
       });
 
       setMarkers(markers);
+      setAllMarkers(markers);
     });
   }, []);
 
@@ -78,12 +112,15 @@ export default function MainWrapper() {
       setMarkers([...markers.sort((a, b) => b.rating - a.rating)]);
     }
   }, [sortByRating]);
+  
   useEffect(() => {
     if (sortByName === "ASC") {
       setMarkers([...markers.sort((a, b) => (a.title > b.title ? 1 : -1))]);
     }
     if (sortByName === "DESC") {
-      setMarkers([...markers.sort((a, b) => -1*(a.title > b.title ? 1 : -1))]);
+      setMarkers([
+        ...markers.sort((a, b) => -1 * (a.title > b.title ? 1 : -1)),
+      ]);
     }
   }, [sortByName]);
 
@@ -103,6 +140,7 @@ export default function MainWrapper() {
         ratingRange={ratingRange}
         setRatingRange={setRatingRange}
         sorting={{ setSortByName, sortByName, setSortByRating, sortByRating }}
+        filtering={{ ratingRange, setRatingRange, searchText, setSearchText }}
       />
     </div>
   );

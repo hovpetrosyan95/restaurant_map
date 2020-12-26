@@ -1,11 +1,10 @@
 import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import FormControl from "@material-ui/core/FormControl";
 
 import RangeSlider from "../RangeSlider";
 import CustomSelect from "../CustomSelect";
+import TextSearch from "../TextSearch";
 import { ASC_DESC } from "../../constants";
 
 import "./styles.scss";
@@ -17,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Head({ ratingRange, setRatingRange, sorting }) {
+export default function Head({ sorting, filtering }) {
   const classes = useStyles();
   const {
     sortByName,
@@ -29,6 +28,18 @@ export default function Head({ ratingRange, setRatingRange, sorting }) {
     sortByRating: null,
     setSortByName: null,
     setSortByRating: null,
+  };
+
+  const {
+    ratingRange,
+    setRatingRange,
+    searchText,
+    setSearchText,
+  } = filtering || {
+    ratingRange: null,
+    setRatingRange: null,
+    searchText: null,
+    setSearchText: null,
   };
 
   return (
@@ -50,13 +61,11 @@ export default function Head({ ratingRange, setRatingRange, sorting }) {
         />
       </div>
       <div>
-        <RangeSlider />
+        <RangeSlider values={ratingRange} setRatingRange={setRatingRange} />
       </div>
 
       <div>
-        <FormControl className={classes.formControl}>
-          <TextField id="standard-basic" label="Search By Title" />
-        </FormControl>
+        <TextSearch val={searchText} setSearchText={setSearchText} />
       </div>
     </div>
   );
