@@ -12,7 +12,7 @@ export default function Restaurants({
   ratingRange,
   setRatingRange,
   sorting,
-  filtering
+  filtering,
 }) {
   return (
     <div>

@@ -24,10 +24,10 @@ export default function Head({ sorting, filtering }) {
     setSortByName,
     setSortByRating,
   } = sorting || {
-    sortByName: '',
-    sortByRating: '',
-    setSortByName: '',
-    setSortByRating: '',
+    sortByName: "",
+    sortByRating: "",
+    setSortByName: "",
+    setSortByRating: "",
   };
 
   const {
@@ -36,10 +36,10 @@ export default function Head({ sorting, filtering }) {
     searchText,
     setSearchText,
   } = filtering || {
-    ratingRange: '',
-    setRatingRange: '',
-    searchText: '',
-    setSearchText: '',
+    ratingRange: "",
+    setRatingRange: "",
+    searchText: "",
+    setSearchText: "",
   };
 
   return (

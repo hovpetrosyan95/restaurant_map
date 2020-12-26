@@ -1,10 +1,10 @@
-.main-wrapper{
-    display: grid;
-    margin: 0 20px;
-    height: 100vh;
-    grid-template-columns: 3fr 2fr;
-    grid-gap: 20px;
-    & > div {
-        height: 100%;
-    }
+.main-wrapper {
+  display: grid;
+  margin: 0 20px;
+  height: 100vh;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 20px;
+  & > div {
+    height: 100%;
+  }
 }

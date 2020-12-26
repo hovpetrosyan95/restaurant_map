@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
   typography: {
-    textAlign: "left"
+    textAlign: "left",
   },
 }));
 
@@ -42,9 +42,7 @@ const marks = [
   },
 ];
 
-export default function RangeSlider({
-    values, setRatingRange
-}) {
+export default function RangeSlider({ values, setRatingRange }) {
   const classes = useStyles();
 
   return (

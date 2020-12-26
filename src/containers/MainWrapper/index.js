@@ -89,7 +89,7 @@ export default function MainWrapper() {
   }, []);
 
   useEffect(() => {
-    if (previous?.previous) {
+    if (previous?.fromList) {
       previous.marker.togglePopup();
     }
     if (current?.fromList) {

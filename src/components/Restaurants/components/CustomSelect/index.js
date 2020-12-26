@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function CustomSelect({ label, values, onChange, val }) {
-
   const [open, setOpen] = React.useState(false);
 
   const handleChange = (event) => {
@@ -44,8 +43,10 @@ export default function CustomSelect({ label, values, onChange, val }) {
         onChange={handleChange}
         width="100%"
       >
-        {values.map((val,idx) => (
-          <MenuItem value={val} key={idx}>{val}</MenuItem>
+        {values.map((val, idx) => (
+          <MenuItem value={val} key={idx}>
+            {val}
+          </MenuItem>
         ))}
       </Select>
     </FormControl>
