@@ -3,6 +3,6 @@
 }
 
 .list{
-    max-height: 75%;
-    overflow-y: scroll;
+    max-height: calc(70vh);
+    overflow-y: auto;
 }
