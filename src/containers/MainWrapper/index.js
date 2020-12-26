@@ -20,8 +20,8 @@ export default function MainWrapper() {
   const [current, setCurrent] = useState(null);
   const [ratingRange, setRatingRange] = useState([0, 5]);
   const [searchText, setSearchText] = useState("");
-  const [sortByName, setSortByName] = useState(null);
-  const [sortByRating, setSortByRating] = useState(null);
+  const [sortByName, setSortByName] = useState("");
+  const [sortByRating, setSortByRating] = useState("");
   const previous = usePrevious(current);
 
   const [center] = useState({

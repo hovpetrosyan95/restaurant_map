@@ -44,8 +44,8 @@ export default function CustomSelect({ label, values, onChange, val }) {
         onChange={handleChange}
         width="100%"
       >
-        {values.map((val) => (
-          <MenuItem value={val}>{val}</MenuItem>
+        {values.map((val,idx) => (
+          <MenuItem value={val} key={idx}>{val}</MenuItem>
         ))}
       </Select>
     </FormControl>
