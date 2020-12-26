@@ -24,7 +24,7 @@ export default function MainWrapper() {
   const [sortByRating, setSortByRating] = useState(null);
   const previous = usePrevious(current);
 
-  const [center, ] = useState({
+  const [center] = useState({
     lat: 40.1772,
     lng: 44.50349,
   });
@@ -35,33 +35,21 @@ export default function MainWrapper() {
   const mapRef = useRef(null);
 
   useEffect(() => {
-    const markersBySearching = allMarkers.filter((m) => {
-      if (m.title.search(searchText) === -1) {
-        m.marker.remove();
-      } else {
-        if (!markers.find((cm) => cm.id === m.id)) {
-          m.marker.addTo(map);
-        }
+    const filteredMarkers = allMarkers.filter((m) => {
+      if (
+        m.title.search(searchText) !== -1 &&
+        m.rating >= ratingRange[0] &&
+        m.rating <= ratingRange[1]
+      ) {
+        m.marker.addTo(map);
         return m;
+      }
+      else{
+          m.marker.remove();
       }
     });
 
-    const markersByRating = allMarkers.filter((m) => {
-      if (m.rating >= ratingRange[0] && m.rating <= ratingRange[1]) {
-        if (!markers.find((cm) => cm.id === m.id)) {
-          m.marker.addTo(map);
-        }
-        return m;
-      } else {
-        m.marker.remove();
-      }
-    });
-
-    const updatedMarkers = markersByRating.filter((m) =>
-      markersBySearching.includes(m)
-    );
-
-    setMarkers(updatedMarkers);
+    setMarkers(filteredMarkers);
   }, [searchText, ratingRange]);
 
   useEffect(() => {
@@ -112,7 +100,7 @@ export default function MainWrapper() {
       setMarkers([...markers.sort((a, b) => b.rating - a.rating)]);
     }
   }, [sortByRating]);
-  
+
   useEffect(() => {
     if (sortByName === "ASC") {
       setMarkers([...markers.sort((a, b) => (a.title > b.title ? 1 : -1))]);
