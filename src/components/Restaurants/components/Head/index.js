@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import RangeSlider from "../RangeSlider";
 import CustomSelect from "../CustomSelect";
 import TextSearch from "../TextSearch";
-import { ASC_DESC } from "../../constants";
+import { ASC_DESC } from "../../../../constants";
 
 import "./styles.scss";
 

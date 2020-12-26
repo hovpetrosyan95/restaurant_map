@@ -1,7 +1,7 @@
 import React from "react";
 
-import Head from "../Head";
-import List from "../List";
+import Head from "./components/Head";
+import List from "./components/List";
 
 import "./styles.scss";
 
